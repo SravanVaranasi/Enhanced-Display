@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style type="text/css">
+    body {
+        background: #E8E8E8;
+        font-family: 'Geneva', serif;
+        margin: 0;
+    }
+    
+    .list-inline {
+        background-color: #CC66FF;
+        /*padding-top: 100px;*/
+        margin: 0;
+        color: #663399;
+        padding: 30px;
+        font-weight: bold;
+        font-size: 15px;
+        /*padding-bottom: 30px;*/
+    }
+    /*.famous.women {
+        background-color: #696969; 
+        color: #ffffff;
+        padding: 10px;
+        padding-bottom: 20px;
+        margin: 0;
+        padding-left: 100px;
+    }*/
+    
+    .anchor {
+        text-decoration: none;
+        padding: 20px;
+        margin: 10px;
+    }
+    
+    .anchor:hover {
+        background-color: #BA55D3;
+        border-radius: 10px;
+        box-shadow: 5px 5px 5px;
+        /*background-size: 30px 15px;*/
+    }
+    
+    .list-head,
+    #image-inline {
+        display: inline;
+    }
+    
+    .image-class {
+        list-style-type: none;
+    }
+    
+    .img {
+        height: 200px;
+        border-radius: 50%;
+        list-style-type: none;
+    }
+    
+    .img {
+        opacity: 0.6;
+    }
+    
+    .img:hover {
+        opacity: 1;
+        -webkit-transition: all 1s ease;
+        -webkit-transform: rotate(10deg);
+    }
+    
+    #table-img {
+        margin: 0;
+    }
+    
+    .img {
+        margin: 20px;
+        padding-left: 10px;
+    }
+    
+    .img-div {
+        background: #D8BFD8;
+        padding: 20px;
+        margin: 10px;
+        width: 300px;
+        height: 400px;
+        padding-left: 50px;
+    }
+    
+    .actor-name {
+        padding-left: 100px;
+        font-size: 15px;
+        font-weight: bold;
+        color: #663399;
+    }
+    
+    .age {
+        padding-left: 120px;
+        font-style: italic;
+        font-size: 10px;
+        font-weight: bold;
+        color: #663399;
+    }
+    
+    .actor-desc {
+        padding-bottom: 50px;
+        font-style: italic;
+        font-size: 15px;
+        color: #663399;
+    }
+    
+    .head-fms-wmn,
+    .head-org,
+    .head-ff {
+        position: relative;
+        background: #696969;
+        height: 60px;
+        text-align: center;
+    }
+    
+    .heading {
+        display: inline-block;
+        color: white;
+        margin: 0 auto;
+        font-size: 24px;
+        padding-top: 16px;
+    }
+    
+    .heading:hover {
+        color: red;
+    }
+    
+    .directions-left {
+        display: inline-block;
+        float: left;
+        padding: 18px;
+    }
+    
+    .directions-right {
+        display: inline-block;
+        float: right;
+        padding: 18px;
+    }
+    
+    #body-famous {
+        margin: 75px;
+        padding: 0;
+    }
+    
+    .anchor-org {
+        text-decoration: none;
+    }
+    
+    .org-img {
+        visibility: hidden;
+        display: block;
+        height: 100px;
+        width: 100px;
+        float: right;
+    }
+    
+    #anchor-org-id1:hover .org-img {
+        visibility: visible;
+    }
+    
+    #anchor-org-id2:hover .org-img {
+        visibility: visible;
+    }
+    
+    #anchor-org-id3:hover .org-img {
+        visibility: visible;
+    }
+    
+    #anchor-org-id4:hover .org-img {
+        visibility: visible;
+    }
+    
+    #anchor-org-id5:hover .org-img {
+        visibility: visible;
+    }
+    
+    #anchor-org-id6:hover .org-img {
+        visibility: visible;
+    }
+    
+    #body-org,
+    #body-ff {
+        margin: 75px;
+        padding-right: 0;
+    }
+    
+    .p-org {
+        font-weight: bold;
+        padding: 20px;
+        color: #663366;
+    }
+    
+    .org-li {
+        color: #663399;
+        list-style-image: url('images/icons/heart.png');
+        padding: 7px;
+        font-style: italic;
+        text-align: left;
+    }
+    
+    .ff-li {
+        color: #663399;
+        list-style-image: url('images/icons/star.png');
+        padding: 7px;
+        font-style: italic;
+        text-align: left;
+    }
+    
+    .ff-anchor {
+        text-decoration: none;
+        font-weight: bold;
+        color: #663366;
+        font-style: normal;
+    }
+    
+    .ff-anchor:hover,
+    .org-li:hover {
+        text-decoration: underline;
+    }
+    
+    .directions-left:hover {
+        background-image: url('images/icons/up_hover.png');
+        background-repeat: no-repeat;
+        height: 30px;
+    }
+    
+    .directions-right:hover {
+        background-image: url('images/icons/down_hover.png');
+        background-repeat: no-repeat;
+        height: 30px;
+    }
+    
+    .directions-left {
+        background-position: right;
+        background-image: url('images/icons/up.png');
+        background-repeat: no-repeat;
+        height: 30px;
+    }
+    
+    .directions-right {
+        background-position: left;
+        background-image: url('images/icons/down.png');
+        background-repeat: no-repeat;
+        height: 30px;
+    }
+    
+    .anchor-arrow-up {
+        color: red;
+    }
+    </style>
+    <title>Beautiful Display</title>
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+    <meta content="utf-8" http-equiv="encoding">
+    <link rel="stylesheet" type="text/css" href="css/vendors/normalize.css">
+    <link rel="stylesheet" type="text/css" href="css/custom/tiles.css">
+</head>
+
+<body>
+    <script type="text/javascript" src="js/vendors/jquery-1.11.3.min.js">
+    </script>
+    <script type="text/javascript" src="js/vendors/jquery-ui-1.11.4.min.js"></script>
+    <script type="text/javascript" src="js/custom/tiles_serviceCall.js"></script>
+    <script type="text/javascript" src="js/custom/tiles_helper.js"></script>
+    <div class="container" align="right">
+        <ul class="list-inline" id="list-inline-top">
+            <li class="list-head"><a href="#head-id-fms-wmn" class="anchor">Famous Women</a></li>
+            <li class="list-head"><a href="#head-id-org" class="anchor">Organizations</a></li>
+            <li class="list-head"><a href="#head-id-ff" class="anchor">Fun facts</a></li>
+        </ul>
+    </div>
+    <div class="head-fms-wmn" id="head-id-fms-wmn">
+        <a class="anchor-arrow-up" href="#list-inline-top">
+            <div class="directions-left"></div>
+        </a>
+        <p class="heading">Famous Women</p>
+        <a class="anchor-arrow-down" href="#head-id-org">
+            <div class="directions-right"></div>
+        </a>
+        <!-- <ul class="hover-ul-1">
+            <li class="hover-li"><img class="hover-img"src="images/icons/up_hover.png"></li>
+            <li class="hover-li">
+                <p id="famous-women">Famous Women</p>
+            </li>
+            <li class="hover-li"><img class="hover-img" src="images/icons/down_hover.png"></li>
+        </ul> -->
+        <!-- <table>
+            <tr>
+                <td class="hover-li"><img class="hover-img" src="images/icons/up_hover.png">
+                </td>
+                <td class="hover-li">
+                    <p id="famous-women">Famous Women</p>
+                </td>
+                <td class="hover-li"><img class="hover-img" src="images/icons/down_hover.png">
+                </td>
+            </tr>
+        </table> -->
+    </div>
+    <div id="body-famous">
+        <table id="table-img">
+            <ul id="image-inline">
+                <tr>
+                    <td>
+                        <li class="image-class">
+                            <div class="img-div">
+                                <p class="actor-name">Margot Robbie</p>
+                                <p class="age">(1990- )</p>
+                                <img class="img" src="images/displays/mr.jpg">
+                                <p class="actor-desc">Australian actress Margot Robbie was raised on the Gold Coast, spending much of her time at the farm belonging to her grandparents.</p>
+                            </div>
+                        </li>
+                    </td>
+                    <td>
+                        <li class="image-class">
+                            <div class="img-div">
+                                <p class="actor-name">Audrey Hepburn</p>
+                                <p class="age">(1929-1993)</p>
+                                <img class="img" src="images/displays/ah.jpg">
+                                <p class="actor-desc">Audrey Hepburn was a British actress and humanitarian. Recognized as a film and fashion icon. Hepburn was active during Hollywood's Golden Age.</p>
+                            </div>
+                        </li>
+                    </td>
+                    <td>
+                        <li class="image-class">
+                            <div class="img-div">
+                                <p class="actor-name">Cl&eacute;mence Po&eacute;sy</p>
+                                <p class="age">(1982- )</p>
+                                <img class="img" src="images/displays/cp.jpg">
+                                <p class="actor-desc">Cl&eacute;mence Po&eacute;sy is a French actress and fashion model. After starting on stage as a child, Po&eacute;sy had dramatic education, and has been active in both film and television since 1999.</p>
+                            </div>
+                        </li>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <li class="image-class">
+                            <div class="img-div">
+                                <p class="actor-name">Elizabeth Debicki</p>
+                                <p class="age">(1990- )</p>
+                                <img class="img" src="images/displays/ed.jpg">
+                                <p class="actor-desc">Debicki was born in Paris to a Polish father and an Australian mother of an Irish descent, who were both dancers.</p>
+                            </div>
+                        </li>
+                    </td>
+                    <td>
+                        <li class="image-class">
+                            <div class="img-div">
+                                <p class="actor-name">Gal Gadot</p>
+                                <p class="age">(1985- )</p>
+                                <img class="img" src="images/displays/gg.jpg">
+                                <p class="actor-desc">Gal Gadot is an Israeli actress and fashion model. She won the Miss Israel title in 2004 and went on the represent Israel at the 2004 Miss Universe beauty pageant.</p>
+                            </div>
+                        </li>
+                    </td>
+                    <td>
+                        <li class="image-class">
+                            <div class="img-div">
+                                <p class="actor-name">M&eacute;lanie Laurent</p>
+                                <p class="age">(1983- )</p>
+                                <img class="img" src="images/displays/ml.jpg">
+                                <p class="actor-desc">M&eacute;lanie Laurent was born in Paris, France. She was born to Annick, a ballet teacher, and Pierre, a voice actor.</p>
+                            </div>
+                        </li>
+                    </td>
+                </tr>
+            </ul>
+        </table>
+    </div>
+    <div class="head-org" id="head-id-org">
+        <a href="#head-id-fms-wmn">
+            <div class="directions-left"></div>
+        </a>
+        <p class="heading">Organizations</p>
+        <a href="#head-id-ff">
+            <div class="directions-right"></div>
+        </a>
+    </div>
+    <div id="body-org">
+        <p class="p-org">There are some awesome organizations that help women in computing. This is a brief list and there are many more out there.</p>
+        <ul class="org-ul">
+            <li class="org-li"><a id="anchor-org-id1" class="anchor-org" href="#org-img1">National Center for Women & Information Technology <img id="org-img1" class="org-img" src="images/logos/5.png"></a></li>
+            <li class="org-li"><a id="anchor-org-id2" class="anchor-org" href="#org-img2">Anita Borg Institute for Women and Technology <img id="org-img2" class="org-img" src="images/logos/2.jpg"></a>
+            </li>
+            <li class="org-li"><a id="anchor-org-id3" class="anchor-org" href="#org-img3">The Ada Initiative <img id="org-img3" class="org-img" src="images/logos/1.png">
+            </a></li>
+            <li class="org-li">
+                <a id="anchor-org-id4" class="anchor-org" href="#org-img4">Girl Develop It <img id="org-img4" class="org-img" src="images/logos/4.png"></a></li>
+            <li class="org-li">
+                <a id="anchor-org-id5" class="anchor-org" href="#org-img5">Black Girls Code <img id="org-img5" class="org-img" src="images/logos/3.jpg"></a></li>
+            <li class="org-li">
+                <a id="anchor-org-id6" class="anchor-org" href="#org-img6">Rails Girls <img id="org-img6" class="org-img" src="images/logos/6.png"></a></li>
+        </ul>
+    </div>
+    <div class="head-ff" id="head-id-ff">
+        <a href="#head-id-org">
+            <div class="directions-left"></div>
+        </a>
+        <p class="heading">Fun Facts</p>
+        <a href="#list-inline-bottom">
+            <div class="directions-right"></div>
+        </a>
+    </div>
+    <div id="body-ff">
+        <ul class="ff-ul">
+            <li class="ff-li">Every year, the Anita Borg Institute holds the <a class="ff-anchor" href="#">Grace Hopper Celebration of Women in Computing</a> conference to bring the research and career interests of women in computing to the forefront.</li>
+            <li class="ff-li">25% of the computing workforce were women in 2011. <a class="ff-anchor" href="#">(reference)</a></li>
+            <li class="ff-li">The <a class="ff-anchor" href="#">DevChix</a> Google group has over 1000 members.</li>
+            <li class="ff-li">Girl Develop it has <a class="ff-anchor" href="#">chapters in eleven cities.</a></li>
+            <li class="ff-li">Women earned 18% of the Computer and Information Sciences undergraduate degree in 2010. <a class="ff-anchor" href="#">(reference)</a></li>
+            <li class="ff-li">The U.S. Bureau of Labor and Statistics projects that by 2018, there will be a total of nearly 1.4 million computing-related jobs added in the U.S., an increase of 22% from 2008. <a class="ff-anchor" href="#">(reference)</a></li>
+            <li class="ff-li">The median age of women in computing and mathematical occupations is 42. <a class="ff-anchor" href="#">(reference)</a></li>
+            <li class="ff-li">Of the 20 occupations with the highest earnings for women, 5 are computing occupations: computer software engineers, computer and information system managers, computer programmers, computer scientists and system analysts, and network systems and data communication analysts. <a class="ff-anchor" href="#">(reference)</a></li>
+        </ul>
+    </div>
+    <div class="container" align="left">
+        <ul class="list-inline" id="list-inline-bottom">
+            <li class="list-head"><a href="#head-id-fms-wmn" class="anchor">Famous Women</a></li>
+            <li class="list-head"><a href="#head-id-org" class="anchor">Organizations</a></li>
+            <li class="list-head"><a href="#head-id-ff" class="anchor">Fun facts</a></li>
+        </ul>
+    </div>
+    <div class="head-ff">
+        <a href="#">
+            <div class="directions-left"></div>
+        </a>
+        <p class="heading">Mobile App</p>
+        <a href="#">
+            <div class="directions-right"></div>
+        </a>
+        <div id="tiles-page">
+            <div id="head">
+                <img id="logo" src="images/logo/logo.gif">
+                <a href="#"><img id="gear"></a>
+            </div>
+            <ul id="tiles-ul"></ul>
+            <div id="settings-page">
+                <h1 id="personalize">Personalize</h1>
+                <button id="done-button">Done</button>
+                <p style="padding: 15px">Tap the check marks to Add/Remove categories from your home screen. Tap and hold the
+                    <span id="stack-inline"></span>to reorder category styles
+                </p>
+                <p style="text-align: center">Want More Local News? Tap here</p>
+                <ul id="settings-ul"></ul>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
